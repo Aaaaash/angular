@@ -1,0 +1,25 @@
+var userInfoModule=angular.module('UserInfoModule',[]);
+userInfoModule.controller('UserInfoCtrl',['$scope',function($scope){
+    $scope.userInfo={
+        email:"binshao54@gmail.com",
+        paddword:"841105127",
+        autoLogin:true
+    };
+    $scope.getFormData=function(){
+        console.log($scope.userInfo);
+    };
+    $scope.setFormData=function(){
+        $scope.userInfo={
+            email:'sakura@126.com',
+            paddword:'sakura',
+            autoLogin:false
+        }
+    };
+    $scope.restFormData=function(){
+        $scope.userInfo={
+            email:"binshao54@gmail.com",
+            paddword:"841105127",
+            autoLogin:true
+        };
+    };
+}])
